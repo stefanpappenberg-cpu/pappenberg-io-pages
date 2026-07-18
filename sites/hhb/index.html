@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HOGAhenning-Bau · Bauunternehmen in Thüringen</title>
+<meta name="description" content="Hoga & Henning Bau GmbH aus Bad Tabarz – Hochbau, Tiefbau, Rohbau, Sanierung und schlüsselfertiges Bauen in Thüringen." />
+<meta property="og:title" content="HOGAhenning-Bau · Bauunternehmen in Thüringen" />
+<meta property="og:description" content="Hochbau, Tiefbau, Rohbau, Sanierung und schlüsselfertiges Bauen in Thüringen." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0d3b7a', dark: '#082a5a' },
+        yellow: { DEFAULT: '#ffdd00', dark: '#e6c700' },
+        border: '#e5e7eb',
+        secondary: '#f6f7f9',
+        muted: '#6b7280',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Manrope', 'Inter', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-sans text-neutral-800 bg-white antialiased">
+
+<!-- HEADER -->
+<header id="header" class="fixed top-0 inset-x-0 z-50 transition-colors">
+  <div class="nav-yellow-cutout" aria-hidden="true"></div>
+  <div class="relative h-16 md:h-[4.5rem] flex items-center">
+    <a href="index.html" class="block h-full nav-logo-link" aria-label="HOGAhenning-Bau Startseite"></a>
+    <nav class="hidden lg:flex items-center gap-8 ml-auto pr-8 text-sm font-medium text-navy">
+      <a href="index.html" class="hover:text-navy-dark">Start</a>
+      <a href="unternehmen.html" class="hover:text-navy-dark">Unternehmen</a>
+      <a href="#leistungen" class="hover:text-navy-dark">Leistungen</a>
+      <a href="#baustellen" class="hover:text-navy-dark">Baustellen</a>
+      <a href="#kontakt" class="rounded-full border border-navy px-5 py-2 hover:bg-navy hover:text-yellow transition-colors">Kontakt</a>
+    </nav>
+    <button id="menuBtn" class="lg:hidden ml-auto mr-5 p-2 text-navy" aria-label="Menü">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <nav id="mobileNav" class="lg:hidden hidden bg-yellow border-t border-navy/10 px-6 py-4 text-navy font-medium space-y-3">
+    <a href="index.html" class="block">Start</a>
+    <a href="unternehmen.html" class="block">Unternehmen</a>
+    <a href="#leistungen" class="block">Leistungen</a>
+    <a href="#baustellen" class="block">Baustellen</a>
+    <a href="#karriere" class="block">Karriere</a>
+    <a href="#kontakt" class="block">Kontakt</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="relative min-h-[100dvh] flex items-end lg:items-center overflow-hidden bg-navy-dark text-white">
+  <video class="absolute inset-0 w-full h-full object-cover" style="transform:scale(1.35)"
+    autoplay muted loop playsinline preload="auto" src="assets/hero-baustelle.mp4"></video>
+  <div class="absolute inset-0 bg-gradient-to-r from-navy-dark/75 via-navy-dark/35 to-transparent"></div>
+  <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-navy-dark/60 to-transparent lg:hidden"></div>
+  <div class="relative w-full max-w-7xl mx-auto px-6 sm:px-8 pt-32 pb-16 lg:py-32">
+    <div class="max-w-2xl">
+      <p class="text-[11px] sm:text-xs font-semibold tracking-[0.28em] uppercase text-yellow mb-4">
+        Hochbau <span class="text-yellow/60 mx-2">•</span> Tiefbau <span class="text-yellow/60 mx-2">•</span> Strassenbau
+      </p>
+      <h1 class="font-display font-bold text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-4">
+        Wir bauen Thüringen.
+      </h1>
+      <p class="text-xs sm:text-sm md:text-base text-white/90 max-w-xl mb-6 leading-relaxed font-light tracking-wide">
+        Solide, termintreu, mit Handschlagqualität
+      </p>
+      <p class="text-base md:text-lg text-white/80 max-w-xl mb-10 leading-relaxed font-light">
+        Seit 2022 realisieren wir anspruchsvolle Hoch-, Tief- und Rohbauprojekte.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#baustellen" class="group inline-flex items-center gap-2 bg-yellow text-navy px-7 py-3.5 text-sm font-semibold tracking-wide hover:bg-yellow-dark transition-all">
+          Aktuelle Baustellen →
+        </a>
+        <a href="#kontakt" class="inline-flex items-center gap-2 border border-white/60 text-white px-7 py-3.5 text-sm font-semibold tracking-wide hover:bg-white hover:text-navy transition-all">
+          Kontakt aufnehmen
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="border-b border-border">
+  <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-3 gap-6">
+    <div class="text-center md:text-left"><div class="font-display font-light text-3xl md:text-4xl text-navy">60+</div><div class="text-[11px] uppercase tracking-[0.2em] font-medium text-muted mt-1">Mitarbeiter</div></div>
+    <div class="text-center md:text-left"><div class="font-display font-light text-3xl md:text-4xl text-navy">2022</div><div class="text-[11px] uppercase tracking-[0.2em] font-medium text-muted mt-1">Gegründet</div></div>
+    <div class="text-center md:text-left"><div class="font-display font-light text-3xl md:text-4xl text-navy">120+</div><div class="text-[11px] uppercase tracking-[0.2em] font-medium text-muted mt-1">Projekte</div></div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section id="leistungen" class="max-w-7xl mx-auto px-6 py-24 md:py-32 scroll-mt-24">
+  <div class="reveal">
+    <div class="flex items-center gap-3 mb-6"><span class="h-px w-8 bg-yellow"></span><span class="text-[11px] font-medium uppercase tracking-[0.3em] text-navy/70">Leistungen</span></div>
+    <h2 class="font-display font-light text-3xl md:text-5xl leading-[1.1] text-navy mb-5">Kompetenz für den gesamten Bau</h2>
+    <p class="text-base md:text-lg max-w-2xl leading-relaxed font-light text-muted">Vom ersten Spatenstich bis zur schlüsselfertigen Übergabe decken wir das gesamte Spektrum des modernen Bauens ab.</p>
+  </div>
+  <div id="leistungenGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border mt-16 border border-border"></div>
+</section>
+
+<!-- BAUSTELLEN -->
+<section id="baustellen" class="bg-secondary/60 border-y border-border py-24 md:py-32 scroll-mt-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="reveal">
+      <div class="flex items-center gap-3 mb-6"><span class="h-px w-8 bg-yellow"></span><span class="text-[11px] font-medium uppercase tracking-[0.3em] text-navy/70">Live vor Ort</span></div>
+      <h2 class="font-display font-light text-3xl md:text-5xl leading-[1.1] text-navy mb-5">Aktuelle Baustellen</h2>
+      <p class="text-base md:text-lg max-w-2xl leading-relaxed font-light text-muted">Transparenz ist uns wichtig: Verfolgen Sie Baufortschritt und Updates unserer aktuellen Projekte direkt online.</p>
+    </div>
+    <div id="baustellenGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16"></div>
+  </div>
+</section>
+
+<!-- ÜBER UNS -->
+<section class="max-w-7xl mx-auto px-6 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  <div class="reveal"><div class="relative aspect-[4/5] overflow-hidden rounded-2xl"><img src="assets/team-02.jpg" alt="Team" class="w-full h-full object-cover" /></div></div>
+  <div class="reveal">
+    <div class="flex items-center gap-3 mb-6"><span class="h-px w-8 bg-yellow"></span><span class="text-[11px] font-medium uppercase tracking-[0.3em] text-navy/70">Über uns</span></div>
+    <h2 class="font-display font-light text-3xl md:text-5xl leading-[1.1] text-navy mb-5">Ein Team, das den Bau versteht.</h2>
+    <p class="text-muted leading-relaxed font-light text-base md:text-lg">Als familiär geführtes Bauunternehmen in Bad Tabarz verbinden wir traditionelles Handwerk mit modernen Bauverfahren. Unsere über 60 qualifizierten Mitarbeiter:innen realisieren Projekte für private, gewerbliche und öffentliche Auftraggeber – vom Einfamilienhaus bis zum Gewerbekomplex.</p>
+    <a href="unternehmen.html" class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-navy border-b border-yellow pb-1 hover:gap-3 transition-all">Mehr über uns →</a>
+  </div>
+</section>
+
+<!-- KARRIERE -->
+<section id="karriere" class="bg-navy text-white py-24 md:py-32 scroll-mt-24">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-14">
+    <div class="lg:col-span-5">
+      <div class="flex items-center gap-3 mb-6"><span class="h-px w-8 bg-yellow"></span><span class="text-[11px] font-medium uppercase tracking-[0.3em] text-yellow">Karriere</span></div>
+      <h2 class="font-display font-light text-3xl md:text-5xl leading-[1.1] text-white mb-5">Werden Sie Teil des Teams</h2>
+      <p class="text-base md:text-lg max-w-2xl leading-relaxed font-light text-white/70">Wir suchen Verstärkung für unsere Baustellen in Thüringen – Fachkräfte, Führungspersönlichkeiten und Auszubildende.</p>
+      <div class="mt-8 space-y-3 text-sm text-white/75 font-light">
+        <p>✓ Unbefristete Anstellung in einem wachsenden Familienunternehmen</p>
+        <p>✓ Regionale Baustellen — abends zu Hause</p>
+        <p>✓ Faire, tariflich orientierte Vergütung</p>
+        <p>✓ Moderner Maschinen- und Fuhrpark</p>
+      </div>
+      <a href="mailto:bewerbung@hogahenning-bau.com" class="mt-10 inline-flex items-center gap-2 rounded-full bg-yellow text-navy px-6 py-3 text-sm font-medium hover:bg-yellow-dark transition-colors">✉ Initiativbewerbung</a>
+    </div>
+    <div id="jobsList" class="lg:col-span-7 space-y-2"></div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" class="max-w-7xl mx-auto px-6 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 scroll-mt-24">
+  <div>
+    <div class="flex items-center gap-3 mb-6"><span class="h-px w-8 bg-yellow"></span><span class="text-[11px] font-medium uppercase tracking-[0.3em] text-navy/70">Kontakt</span></div>
+    <h2 class="font-display font-light text-3xl md:text-5xl leading-[1.1] text-navy mb-5">Sprechen Sie mit uns</h2>
+    <p class="text-base md:text-lg max-w-2xl leading-relaxed font-light text-muted">Sie planen ein Bauvorhaben oder haben Fragen zu einem laufenden Projekt? Wir freuen uns auf Ihre Nachricht.</p>
+    <div class="mt-10 space-y-6">
+      <div class="flex gap-4"><div class="h-10 w-10 rounded-full border border-border grid place-items-center shrink-0 text-navy">📍</div><div><div class="text-[11px] uppercase tracking-[0.2em] font-medium text-muted mb-1">Anschrift</div><div class="text-sm leading-relaxed">Hoga & Henning Bau GmbH<br>Waltershäuser Str. 30<br>99891 Bad Tabarz</div></div></div>
+      <div class="flex gap-4"><div class="h-10 w-10 rounded-full border border-border grid place-items-center shrink-0 text-navy">📞</div><div><div class="text-[11px] uppercase tracking-[0.2em] font-medium text-muted mb-1">Telefon</div><a href="tel:+493633376760" class="text-sm hover:text-navy">036333 76-0</a></div></div>
+      <div class="flex gap-4"><div class="h-10 w-10 rounded-full border border-border grid place-items-center shrink-0 text-navy">✉</div><div><div class="text-[11px] uppercase tracking-[0.2em] font-medium text-muted mb-1">E-Mail</div><a href="mailto:info@hogahenning-bau.com" class="text-sm hover:text-navy">info@hogahenning-bau.com</a></div></div>
+      <div class="flex gap-4"><div class="h-10 w-10 rounded-full border border-border grid place-items-center shrink-0 text-navy">🕐</div><div><div class="text-[11px] uppercase tracking-[0.2em] font-medium text-muted mb-1">Öffnungszeiten</div><div class="text-sm leading-relaxed">Mo – Do: 07:00 – 16:30 Uhr<br>Fr: 07:00 – 13:00 Uhr</div></div></div>
+    </div>
+  </div>
+  <form id="kontaktForm" class="bg-secondary/60 border border-border rounded-2xl p-8 md:p-10 space-y-5">
+    <h3 class="font-display text-xl text-navy mb-2">Anfrage senden</h3>
+    <div><label class="block text-xs font-medium uppercase tracking-widest text-navy/70 mb-2">Name *</label><input required name="name" class="w-full rounded-lg border border-border bg-white p-3 text-sm focus:outline-none focus:border-navy" /></div>
+    <div><label class="block text-xs font-medium uppercase tracking-widest text-navy/70 mb-2">E-Mail *</label><input required type="email" name="email" class="w-full rounded-lg border border-border bg-white p-3 text-sm focus:outline-none focus:border-navy" /></div>
+    <div><label class="block text-xs font-medium uppercase tracking-widest text-navy/70 mb-2">Telefon</label><input name="telefon" class="w-full rounded-lg border border-border bg-white p-3 text-sm focus:outline-none focus:border-navy" /></div>
+    <div><label class="block text-xs font-medium uppercase tracking-widest text-navy/70 mb-2">Nachricht *</label><textarea required rows="5" name="nachricht" class="w-full rounded-lg border border-border bg-white p-3 text-sm focus:outline-none focus:border-navy"></textarea></div>
+    <button type="submit" class="w-full rounded-full bg-navy text-white px-6 py-3.5 text-sm font-medium hover:bg-navy-dark transition-colors">Nachricht senden</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navy-dark text-white/80 py-14 border-t-4 border-yellow">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+    <div>
+      <div class="font-display font-bold text-white text-lg mb-3">Hoga & Henning Bau GmbH</div>
+      <p class="font-light leading-relaxed">Waltershäuser Str. 30<br>99891 Bad Tabarz<br>Tel.: 036333 76-0</p>
+    </div>
+    <div>
+      <div class="text-yellow text-[11px] uppercase tracking-[0.2em] font-medium mb-3">Navigation</div>
+      <ul class="space-y-2 font-light">
+        <li><a href="index.html" class="hover:text-white">Start</a></li>
+        <li><a href="unternehmen.html" class="hover:text-white">Unternehmen</a></li>
+        <li><a href="#leistungen" class="hover:text-white">Leistungen</a></li>
+        <li><a href="#baustellen" class="hover:text-white">Baustellen</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-yellow text-[11px] uppercase tracking-[0.2em] font-medium mb-3">Rechtliches</div>
+      <ul class="space-y-2 font-light">
+        <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
+        <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-white/10 text-xs text-white/50 flex flex-wrap justify-between gap-3">
+    <span>© <span id="year"></span> Hoga & Henning Bau GmbH</span>
+    <span>Bauunternehmen · Thüringen</span>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 p-4">
+  <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto p-6 md:p-10 relative">
+    <button id="modalClose" class="absolute top-4 right-4 text-navy hover:opacity-70 text-2xl leading-none">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
