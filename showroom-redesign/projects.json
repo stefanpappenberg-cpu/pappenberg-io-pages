@@ -1,0 +1,55 @@
+{
+  "allowed_root": "/Users/pappenberg/Documents/Webseiten",
+  "defaults": {
+    "pappenberg_repository": "/Users/pappenberg/Documents/Webseiten/pappenberg-io-deploy/pappenberg.io",
+    "next_preview_port": 4450
+  },
+  "projects": [
+    {
+      "id": "studio-johanna",
+      "name": "Studio Johanna",
+      "description": "Testversion für Katja Klante unter pappenberg.io/johanna/.",
+      "path": "/Users/pappenberg/Documents/Webseiten/Projekte/johanna",
+      "preview_root": ".",
+      "port": 4410,
+      "color": "#8f2d91",
+      "publish": {
+        "target_type": "pappenberg",
+        "repository_path": "/Users/pappenberg/Documents/Webseiten/pappenberg-io-deploy/pappenberg.io",
+        "target_subdir": "johanna",
+        "production_url": "https://pappenberg.io/johanna/",
+        "mode": "static-email-test"
+      }
+    },
+    {
+      "id": "hhb-gmbh",
+      "name": "HHB GmbH",
+      "description": "Lokales Projekt; Veröffentlichungsziel muss noch zugeordnet werden.",
+      "path": "/Users/pappenberg/Documents/Webseiten/Projekte/HHB GmbH",
+      "preview_root": ".",
+      "port": 4420,
+      "color": "#52715f",
+      "publish": {
+        "target_type": "external",
+        "repository_path": "",
+        "target_subdir": ".",
+        "production_url": ""
+      }
+    },
+    {
+      "id": "pappenberg-intro",
+      "name": "pappenberg.io · Intro",
+      "description": "Lokale Fassung der Hauptseite; Produktionszuordnung bewusst noch offen.",
+      "path": "/Users/pappenberg/Documents/Webseiten/Projekte/pappenberg/intro",
+      "preview_root": ".",
+      "port": 4430,
+      "color": "#718063",
+      "publish": {
+        "target_type": "pappenberg",
+        "repository_path": "",
+        "target_subdir": ".",
+        "production_url": "https://pappenberg.io/"
+      }
+    }
+  ]
+}

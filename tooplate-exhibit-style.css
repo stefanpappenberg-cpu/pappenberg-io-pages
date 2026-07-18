@@ -212,7 +212,7 @@ button { font: inherit; }
 .build-progress__fill {
   position: absolute;
   inset: 0 auto auto 0;
-  width: 66%;
+  width: 67%;
   height: 1px;
   background: var(--primary);
   transform: scaleX(0);
@@ -233,7 +233,7 @@ button { font: inherit; }
 
 .build-progress__point--start { left: 0; }
 .build-progress__point--now {
-  left: 66%;
+  left: 67%;
   width: 7px;
   height: 7px;
   border-color: var(--primary);

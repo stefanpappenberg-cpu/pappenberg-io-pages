@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#151815">
+    <title>Showroom · Projektzentrale</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="/" aria-label="Showroom Startseite">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>showroom</span>
+        </a>
+
+        <nav class="nav" aria-label="Hauptnavigation">
+          <button class="nav-item is-active" type="button" data-view="workspace">
+            <span class="nav-icon">⌂</span><span>Arbeitsplatz</span>
+          </button>
+          <button class="nav-item" type="button" data-view="projects">
+            <span class="nav-icon">□</span><span>Projekte</span>
+          </button>
+          <button class="nav-item" type="button" data-view="deployments">
+            <span class="nav-icon">↑</span><span>Veröffentlichen</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-note">
+          <span class="status-dot"></span>
+          <div><strong>System bereit</strong><small>Lokal auf diesem Mac</small></div>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <div>
+            <span class="eyebrow">Developer Workspace</span>
+            <h1>Von lokal bis live.<br><em>Ohne Rätselraten.</em></h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="button ghost" id="refresh" type="button">Status prüfen</button>
+            <button class="button primary" id="import-project" type="button">+ Projekt einrichten</button>
+          </div>
+        </header>
+
+        <main>
+          <section class="workflow" aria-labelledby="workflow-title">
+            <div class="section-heading">
+              <div>
+                <span class="section-index">01</span>
+                <h2 id="workflow-title">Der Ablauf</h2>
+              </div>
+              <p>Jedes Projekt folgt denselben vier nachvollziehbaren Schritten.</p>
+            </div>
+            <ol class="workflow-steps">
+              <li><span>1</span><strong>Projekt wählen</strong><small>Lokalen Quellordner festlegen</small></li>
+              <li><span>2</span><strong>Lokal bearbeiten</strong><small>Codex öffnen und Vorschau prüfen</small></li>
+              <li><span>3</span><strong>Ziel zuordnen</strong><small>Repository, Unterordner und URL</small></li>
+              <li><span>4</span><strong>Veröffentlichen</strong><small>Synchronisieren, committen, pushen</small></li>
+            </ol>
+          </section>
+
+          <section class="project-section" aria-labelledby="projects-title">
+            <div class="section-heading project-heading">
+              <div>
+                <span class="section-index">02</span>
+                <h2 id="projects-title">Projektübersicht</h2>
+              </div>
+              <div class="heading-meta">
+                <span id="project-count">–</span>
+                <select id="project-filter" aria-label="Projekte filtern">
+                  <option value="all">Alle Projekte</option>
+                  <option value="ready">Bereit zum Veröffentlichen</option>
+                  <option value="attention">Einrichtung offen</option>
+                </select>
+              </div>
+            </div>
+            <div class="project-list" id="project-grid" aria-live="polite">
+              <div class="loading-card">Projekte werden geprüft …</div>
+            </div>
+          </section>
+        </main>
+
+        <footer>
+          <span>Showroom 1.0</span>
+          <span>Projekt → Vorschau → Ziel → Live</span>
+          <span id="clock"></span>
+        </footer>
+      </div>
+    </div>
+
+    <dialog id="project-dialog" class="setup-dialog">
+      <form id="project-form">
+        <div class="dialog-head">
+          <div>
+            <span class="dialog-label">Neues Projekt</span>
+            <h2>Projekt eindeutig einrichten</h2>
+            <p>Quelle und Veröffentlichungsziel werden dauerhaft miteinander verknüpft.</p>
+          </div>
+          <button type="button" class="icon-button" data-dialog-close aria-label="Dialog schließen">×</button>
+        </div>
+
+        <div class="form-section">
+          <span class="form-number">1</span>
+          <div>
+            <h3>Lokale Quelle</h3>
+            <p>Der Ordner, in dem du und Codex arbeiten.</p>
+            <div class="field-grid">
+              <label><span>Projektname</span><input name="name" required placeholder="z. B. Studio Johanna"></label>
+              <label><span>Lokaler Projektordner</span><input name="path" required placeholder="/Users/…/Projekte/johanna"></label>
+              <label><span>Vorschau-Ordner</span><input name="preview_root" value="." required><small>Relativ zum Projektordner; meist „.“</small></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <span class="form-number">2</span>
+          <div>
+            <h3>Veröffentlichungsziel</h3>
+            <p>Wähle einen Unterordner auf pappenberg.io oder ein eigenes Domain-Projekt.</p>
+            <div class="target-switch" role="radiogroup" aria-label="Veröffentlichungsart">
+              <label><input type="radio" name="target_type" value="pappenberg" checked><span><strong>pappenberg.io</strong><small>Als Unterordner veröffentlichen</small></span></label>
+              <label><input type="radio" name="target_type" value="external"><span><strong>Externe Domain</strong><small>Eigenes Repository und Domain</small></span></label>
+            </div>
+            <div class="field-grid">
+              <label><span>Git-Repository (lokaler Klon)</span><input name="repository_path" placeholder="/Users/…/pappenberg-io-deploy"></label>
+              <label data-subdir-field><span>Unterordner im Repository</span><input name="target_subdir" placeholder="johanna"><small>Ergibt pappenberg.io/johanna/</small></label>
+              <label><span>Öffentliche URL</span><input name="production_url" type="url" placeholder="https://pappenberg.io/johanna/"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="dialog-actions">
+          <button type="button" class="button ghost" data-dialog-close>Abbrechen</button>
+          <button type="submit" class="button primary">Projekt prüfen und anlegen</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="publish-dialog" class="publish-dialog">
+      <form id="publish-form">
+        <span class="dialog-label">Veröffentlichung</span>
+        <h2>Änderungen übertragen?</h2>
+        <p id="publish-summary"></p>
+        <div class="publish-route" id="publish-route"></div>
+        <label class="confirm-check">
+          <input type="checkbox" id="publish-confirm">
+          <span>Ich habe Quelle, Zielordner und öffentliche URL geprüft.</span>
+        </label>
+        <div class="dialog-actions">
+          <button type="button" class="button ghost" data-publish-close>Abbrechen</button>
+          <button type="submit" class="button primary" id="publish-submit" disabled>Synchronisieren & Git vorbereiten</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
