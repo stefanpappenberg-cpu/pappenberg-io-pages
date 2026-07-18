@@ -1,0 +1,53 @@
+<!--
+Tooplate 2160 Exhibit Studio
+https://www.tooplate.com/view/2160-exhibit-studio
+Free HTML CSS Template
+-->
+
+Image Filename Mapping
+==================================================
+
+Gallery images use two sizes:
+  - Thumbnail (grid): images/thumb-exhibit-XX.jpg
+  - Full/Lightbox:    images/tooplate-exhibit-XX.jpg
+
+Picsum URL → Local Filename
+--------------------------------------------------
+01  https://picsum.photos/seed/ex01/600/900     → images/thumb-exhibit-01.jpg
+    https://picsum.photos/seed/ex01/1200/1800    → images/tooplate-exhibit-01.jpg
+
+02  https://picsum.photos/seed/ex02/600/400     → images/thumb-exhibit-02.jpg
+    https://picsum.photos/seed/ex02/1800/1200    → images/tooplate-exhibit-02.jpg
+
+03  https://picsum.photos/seed/ex03/600/800     → images/thumb-exhibit-03.jpg
+    https://picsum.photos/seed/ex03/1200/1600    → images/tooplate-exhibit-03.jpg
+
+04  https://picsum.photos/seed/ex04/600/400     → images/thumb-exhibit-04.jpg
+    https://picsum.photos/seed/ex04/1800/1200    → images/tooplate-exhibit-04.jpg
+
+05  https://picsum.photos/seed/ex05/600/900     → images/thumb-exhibit-05.jpg
+    https://picsum.photos/seed/ex05/1200/1800    → images/tooplate-exhibit-05.jpg
+
+06  https://picsum.photos/seed/ex06/600/360     → images/thumb-exhibit-06.jpg
+    https://picsum.photos/seed/ex06/1800/1080    → images/tooplate-exhibit-06.jpg
+
+07  https://picsum.photos/seed/ex07/600/600     → images/thumb-exhibit-07.jpg
+    https://picsum.photos/seed/ex07/1200/1200    → images/tooplate-exhibit-07.jpg
+
+08  https://picsum.photos/seed/ex08/600/900     → images/thumb-exhibit-08.jpg
+    https://picsum.photos/seed/ex08/1200/1800    → images/tooplate-exhibit-08.jpg
+
+09  https://picsum.photos/seed/ex09/600/750     → images/thumb-exhibit-09.jpg
+    https://picsum.photos/seed/ex09/1200/1500    → images/tooplate-exhibit-09.jpg
+
+10  https://picsum.photos/seed/ex10/600/400     → images/thumb-exhibit-10.jpg
+    https://picsum.photos/seed/ex10/1800/1200    → images/tooplate-exhibit-10.jpg
+
+11  https://picsum.photos/seed/ex11/600/800     → images/thumb-exhibit-11.jpg
+    https://picsum.photos/seed/ex11/1200/1600    → images/tooplate-exhibit-11.jpg
+
+12  https://picsum.photos/seed/ex12/600/400     → images/thumb-exhibit-12.jpg
+    https://picsum.photos/seed/ex12/1800/1200    → images/tooplate-exhibit-12.jpg
+
+About page portrait (single size):
+13  https://picsum.photos/seed/portrait/600/800 → images/tooplate-about-image.jpg
