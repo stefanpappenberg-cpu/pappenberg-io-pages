@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Termine — Studio Johanna intern</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="admin.css" />
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <header class="admin-header">
+    <div>
+      <p class="eyebrow">Studio Johanna · Intern</p>
+      <h1>Terminanfragen</h1>
+    </div>
+    <button type="button" data-refresh>Aktualisieren</button>
+  </header>
+
+  <main>
+    <section class="admin-toolbar" aria-label="Termine filtern">
+      <label>
+        <span>Suche</span>
+        <input type="search" placeholder="Name, Referenz, Anlass …" data-search />
+      </label>
+      <label>
+        <span>Status</span>
+        <select data-status-filter>
+          <option value="">Alle</option>
+          <option value="neu">Neu</option>
+          <option value="in_pruefung">In Prüfung</option>
+          <option value="option">Option</option>
+          <option value="bestaetigt">Bestätigt</option>
+          <option value="abgelehnt">Abgelehnt</option>
+          <option value="storniert">Storniert</option>
+        </select>
+      </label>
+      <div class="admin-count" data-count>0 Terminkarten</div>
+    </section>
+
+    <div class="admin-message" role="status" aria-live="polite" data-message>
+      Verwaltung wird geladen …
+    </div>
+    <section class="booking-cards" aria-label="Terminkarten" data-cards></section>
+  </main>
+
+  <template data-card-template>
+    <article class="booking-card">
+      <header class="card-head">
+        <div>
+          <p class="card-reference" data-reference></p>
+          <h2 data-title></h2>
+          <p data-created></p>
+        </div>
+        <span class="status-badge" data-status-badge></span>
+      </header>
+
+      <div class="card-facts">
+        <div><span>Termin</span><strong data-date></strong></div>
+        <div><span>Umfang</span><strong data-scope></strong></div>
+        <div><span>Gäste</span><strong data-guests></strong></div>
+        <div><span>Indikation</span><strong data-price></strong></div>
+      </div>
+
+      <details>
+        <summary>Alle Angaben</summary>
+        <dl class="card-details">
+          <div><dt>Kontakt</dt><dd data-contact></dd></div>
+          <div><dt>Bestuhlung</dt><dd data-seating></dd></div>
+          <div><dt>Optionen</dt><dd data-addons></dd></div>
+          <div><dt>Unterkunft</dt><dd data-lodging></dd></div>
+          <div><dt>Hinweise</dt><dd data-notes></dd></div>
+        </dl>
+      </details>
+
+      <div class="card-edit">
+        <label>
+          <span>Status</span>
+          <select data-status>
+            <option value="neu">Neu</option>
+            <option value="in_pruefung">In Prüfung</option>
+            <option value="option">Option</option>
+            <option value="bestaetigt">Bestätigt</option>
+            <option value="abgelehnt">Abgelehnt</option>
+            <option value="storniert">Storniert</option>
+          </select>
+        </label>
+        <label class="note-field">
+          <span>Interne Notiz</span>
+          <textarea rows="3" maxlength="2000" placeholder="Rückruf, Angebot, Sonderwunsch …" data-note></textarea>
+        </label>
+        <button type="button" data-save>Terminkarte speichern</button>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

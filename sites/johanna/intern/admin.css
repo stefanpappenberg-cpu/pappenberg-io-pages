@@ -1,0 +1,65 @@
+:root {
+  color-scheme: light;
+  --ink: #25221e;
+  --muted: #746e66;
+  --line: #ddd7ce;
+  --paper: #fbfaf7;
+  --soft: #f1eee8;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.admin-header,
+main { width: min(100% - 2rem, 88rem); margin-inline: auto; }
+.admin-header {
+  display: flex; align-items: end; justify-content: space-between; gap: 2rem;
+  padding: 3rem 0 1.5rem; border-bottom: 1px solid var(--line);
+}
+.eyebrow { margin: 0 0 .5rem; color: var(--muted); text-transform: uppercase; letter-spacing: .18em; font-size: .72rem; }
+h1 { margin: 0; font-family: Georgia, serif; font-weight: 400; font-size: clamp(2.4rem, 6vw, 4.8rem); }
+.admin-header button,
+.card-edit button { border: 1px solid var(--ink); background: var(--ink); color: var(--paper); padding: .8rem 1rem; }
+
+.admin-toolbar { display: grid; grid-template-columns: minmax(14rem, 1fr) minmax(11rem, .35fr) auto; gap: 1rem; align-items: end; padding: 1.5rem 0; }
+label { display: grid; gap: .4rem; }
+label > span, .card-facts span { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; }
+input, select, textarea { width: 100%; border: 1px solid var(--line); background: white; color: var(--ink); padding: .75rem; }
+.admin-count { color: var(--muted); padding-bottom: .75rem; white-space: nowrap; }
+.admin-message { padding: 1rem; border: 1px solid var(--line); background: white; }
+.admin-message:empty { display: none; }
+
+.booking-cards { display: grid; gap: 1rem; padding-bottom: 4rem; }
+.booking-card { border: 1px solid var(--line); background: white; padding: clamp(1rem, 3vw, 1.6rem); }
+.card-head { display: flex; align-items: start; justify-content: space-between; gap: 1rem; }
+.card-reference { margin: 0 0 .35rem; color: var(--muted); font-size: .78rem; letter-spacing: .08em; }
+.card-head h2 { margin: 0; font-family: Georgia, serif; font-weight: 400; font-size: clamp(1.5rem, 3vw, 2.2rem); }
+.card-head h2 + p { margin: .35rem 0 0; color: var(--muted); font-size: .85rem; }
+.status-badge { padding: .45rem .65rem; background: var(--soft); text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; white-space: nowrap; }
+.status-badge[data-value="bestaetigt"] { background: #e5efe0; color: #34512d; }
+.status-badge[data-value="option"] { background: #f6ebcf; color: #6c5320; }
+.status-badge[data-value="abgelehnt"], .status-badge[data-value="storniert"] { background: #f1e3e0; color: #6d342c; }
+
+.card-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); margin: 1.25rem 0; }
+.card-facts div { display: grid; gap: .35rem; padding: 1rem; background: var(--paper); }
+.card-facts strong { font-size: .92rem; }
+details { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: .9rem 0; }
+summary { cursor: pointer; font-weight: 600; }
+.card-details { display: grid; gap: .7rem; margin: 1rem 0 0; }
+.card-details div { display: grid; grid-template-columns: 8rem 1fr; gap: 1rem; }
+.card-details dt { color: var(--muted); }
+.card-details dd { margin: 0; white-space: pre-wrap; }
+.card-details a { color: inherit; }
+.card-edit { display: grid; grid-template-columns: 12rem 1fr auto; gap: 1rem; align-items: end; margin-top: 1.25rem; }
+.card-edit button { min-height: 2.75rem; }
+
+@media (max-width: 760px) {
+  .admin-header { align-items: start; }
+  .admin-toolbar, .card-edit { grid-template-columns: 1fr; }
+  .admin-count { padding: 0; }
+  .card-facts { grid-template-columns: repeat(2, 1fr); }
+  .card-details div { grid-template-columns: 1fr; gap: .25rem; }
+}

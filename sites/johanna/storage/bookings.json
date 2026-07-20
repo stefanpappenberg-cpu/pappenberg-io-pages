@@ -1,0 +1,34 @@
+[
+  {
+    "schemaVersion": 1,
+    "id": "710cb079323b2f44ddd352e3cecec842",
+    "reference": "SJ-260716-710CB0",
+    "status": "storniert",
+    "createdAt": "2026-07-16T02:27:37+02:00",
+    "updatedAt": "2026-07-16T02:29:37+02:00",
+    "internalNote": "interne notiz testen",
+    "type": "familiencafe",
+    "typeLabel": "Familiencafe / Dinner",
+    "date": "2026-07-19",
+    "endDate": "2026-07-19",
+    "isMultiDay": false,
+    "dayCount": 1,
+    "start": "14:00",
+    "duration": 6,
+    "guests": 24,
+    "seating": "Lange Tafel",
+    "addons": [
+      "tafel",
+      "catering",
+      "blumen"
+    ],
+    "lodging": "Noch nicht benötigt",
+    "priceNet": 170,
+    "priceLabel": "ab 170 Euro netto · finale Kalkulation nach Ausstattung und Service",
+    "name": "Stefan Pappenberg",
+    "email": "stefan.pappenberg@gmail.com",
+    "phone": "+4915730247969",
+    "notes": "test",
+    "privacyVersion": "2026-07-16"
+  }
+]
