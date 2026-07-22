@@ -1,7 +1,7 @@
 {
   "allowed_root": "/Users/pappenberg/Documents/Webseiten",
   "defaults": {
-    "pappenberg_repository": "/Users/pappenberg/Documents/Webseiten/pappenberg-io-deploy/pappenberg.io",
+    "pappenberg_repository": "/Users/pappenberg/Documents/Webseiten/Deploy/pappenberg-pages-deploy",
     "next_preview_port": 4450
   },
   "projects": [
@@ -15,7 +15,7 @@
       "color": "#8f2d91",
       "publish": {
         "target_type": "pappenberg",
-        "repository_path": "/Users/pappenberg/Documents/Webseiten/pappenberg-io-deploy/pappenberg.io",
+        "repository_path": "/Users/pappenberg/Documents/Webseiten/Deploy/pappenberg-pages-deploy",
         "target_subdir": "johanna",
         "production_url": "https://pappenberg.io/johanna/",
         "mode": "static-email-test"
